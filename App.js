@@ -16,7 +16,7 @@ export default function App() {
                 {/*<Text>{JSON.stringify(selectedAnswer)}</Text>*/}
 
                 <Image source={img} style={styles.img} />
-                <Text>{qns}</Text>
+                <Text style={{textAlign: 'center', fontSize: 20, padding: 10}}>{qns}</Text>
                 <RSPickerSelect
                     onValueChange={(val)=>{
                         let currentAns = `${qns}${val}`
@@ -157,7 +157,7 @@ export default function App() {
                     // TotalScores();
                     Alert.alert('You have ' + selectedAnswer.length + ' correct answers') }}
                 title={'Submit Answer'}
-                color={'grey'}
+                color={'steelblue'}
             />
         </View>
     </SafeAreaView>
@@ -168,25 +168,25 @@ const styles = StyleSheet.create({
     scrollView: {
         // flex: 1,
         backgroundColor: 'lightblue',
-        marginLeft: 10,
-        marginRight: 10,
-        // marginBottom: 10,
-        height: 740
+        marginLeft: 20,
+        marginRight: 20,
+        height: 700,
+        borderRadius: 20
     },
 
     img: {
         resizeMode: 'contain',
-        width: 389,
+        width: 350,
         height: 255,
+        margin: 10,
+        borderRadius: 20,
     },
 
     btn: {
-        // position: 'absolute',
-        // bottom: 0,
-        // flex: 1
-        padding: 10,
-        marginBottom: 10,
-        backgroundColor: 'lightblue'
+        backgroundColor: 'lightblue',
+        paddingVertical: 22,
+        paddingHorizontal: 22,
+        // width: '100%',
     },
 
     title: {
@@ -198,14 +198,14 @@ const styles = StyleSheet.create({
     quizContainer: {
         borderWidth: 1,
         borderRadius: 10,
-        marginBottom: 10,
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
+        marginBottom: 20
     },
 
     fullView: {
         flexDirection: 'column',
-        height: '93%',
-        backgroundColor: 'lightblue'
-    }
+        backgroundColor: 'lightblue',
+        // height: '93%'
+    },
 });
 
